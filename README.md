@@ -8,7 +8,7 @@ Gradle плагин на котлин для подсчета количеств
 
 1. **Скачайте проект:**
     ```bash
-   https://github.com/AlexanderTaran73/ProjectDeclInfPlugin.git
+   git clone https://github.com/AlexanderTaran73/ProjectDeclInfPlugin.git
    ```
 
 2. **Перейдите в каталог проекта:**
@@ -22,7 +22,7 @@ Gradle плагин на котлин для подсчета количеств
     ```
 
 4. **Подключить плагин в желаемый проект:**
-    В build.gradle
+    В 'build.gradle'
     ```kotlin
     plugins {
       id("io.github.AlexanderTaran73") version "0.0.1"
@@ -36,7 +36,7 @@ Gradle плагин на котлин для подсчета количеств
     dir = "src" // Или другую дирикторию в которой необходомо сделать подсчет
     }
     ```
-   В settings.gradle
+   В 'settings.gradle'
     ```kotlin
     pluginManagement {
       repositories {
@@ -52,8 +52,8 @@ Gradle плагин на котлин для подсчета количеств
 
 6. **Запустить плагин**
     ```bash
-   .\gradlew.bat dirinf
+   ./gradlew.bat dirinf
     ```
 
 
-В результате выполнения этих дествий в основной папке проекта появится ClassAndMethodsDecInf.json с искомыми данными.
+В результате выполнения этих дествий в основной папке проекта появится 'ClassAndMethodsDecInf.json' с искомыми данными.
