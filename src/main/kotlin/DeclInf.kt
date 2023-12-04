@@ -35,7 +35,7 @@ class DeclInf {
         val gson = Gson()
         val dataMap = mapOf<String, Int>(Pair("totalClasses", classAndMethodsDec.totalClasses), Pair("totalMethods", classAndMethodsDec.totalMethods), Pair("totalLines", classAndMethodsDec.totalLines))
 
-        val file = File("ClassAndMethodsDecInf.txt")
+        val file = File("ClassAndMethodsDecInf.json")
         file.writeText(gson.toJson(dataMap))
 //        file.createNewFile()
 //        println(gson.toJson(dataMap))
