@@ -1,59 +1,58 @@
-## Gradle плагин для подсчета количества слассов и функций
+## Gradle Plugin for Counting Classes and Functions
 
-### Описание
+### Description
 
-Gradle плагин на котлин для подсчета количества классов, функций и строк в файлах .kt и .java. Плагин написан на Kotlin с использованием ANTLR4.
+A Gradle plugin in Kotlin for counting the number of classes, functions, and lines in .kt and .java files. The plugin is written in Kotlin using ANTLR4.
 
-### Инструкции по запуску
+### Instructions for Running
 
-1. **Скачайте проект:**
+1. **Download the project:**
     ```bash
-   git clone https://github.com/AlexanderTaran73/ProjectDeclInfPlugin.git
-   ```
+    git clone https://github.com/AlexanderTaran73/ProjectDeclInfPlugin.git
+    ```
 
-2. **Перейдите в каталог проекта:**
+2. **Navigate to the project directory:**
     ```bash
     cd ProjectDeclInfPlugin
     ```
 
-3. **Опубликовать плаган в локальный репозиторий:**
+3. **Publish the plugin to the local repository:**
     ```bash
-   ./gradlew.bat publishToMavenLocal
+    ./gradlew.bat publishToMavenLocal
     ```
 
-4. **Подключить плагин в желаемый проект:**
-    В 'build.gradle'
+4. **Apply the plugin to the desired project:**
+    In `build.gradle`:
     ```kotlin
     plugins {
-      id("io.github.AlexanderTaran73") version "0.0.1"
+        id("io.github.AlexanderTaran73") version "0.0.1"
     }
-   
+    
     repositories {
-      mavenLocal()
+        mavenLocal()
     }
-   
-    dirinf{
-    dir = "src" // Или другую дирикторию в которой необходомо сделать подсчет
+    
+    dirinf {
+        dir = "src" // Or another directory where the count is needed
     }
     ```
-   В 'settings.gradle'
+    In `settings.gradle`:
     ```kotlin
     pluginManagement {
-      repositories {
-        gradlePluginPortal()
-        mavenLocal()
-      }
+        repositories {
+            gradlePluginPortal()
+            mavenLocal()
+        }
     }
     ```
-5. **Собрать проект**
+5. **Build the project:**
     ```bash
-   ./gradlew build
-   ```
-
-6. **Запустить плагин**
-    ```bash
-   ./gradlew.bat dirinf
+    ./gradlew build
     ```
 
+6. **Run the plugin:**
+    ```bash
+    ./gradlew.bat dirinf
+    ```
 
-В результате выполнения этих дествий в основной папке проекта появится 'ClassAndMethodsDecInf.json' с искомыми данными.
+As a result of these actions, a `ClassAndMethodsDecInf.json` file with the required data will appear in the main project folder.
